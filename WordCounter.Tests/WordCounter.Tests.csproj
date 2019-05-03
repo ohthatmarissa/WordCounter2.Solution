@@ -14,6 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ToDoList\ToDoList.csproj" />
+    <ProjectReference Include="..\WordCounter\WordCounter.csproj" />
   </ItemGroup>
 </Project>
