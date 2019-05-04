@@ -1,22 +1,22 @@
-// // using Microsoft.VisualStudio.TestTools.UnitTesting;
-// using System;
-// using System.Collections.Generic;
-// using WordCounter.Models;
-//
-// namespace Words.Controllers
-// {
-//   public class WordsController : Controller
-//   {
-//     [HTTPGet("/words")]
-//     public ActionResult Index()
-//     {
-//       return View();
-//     }
-//   }
-// }
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using WordCounter.Models;
+
+namespace Words.Controllers
+{
+  public class WordsController : Controller
+  {
+    [HttpGet("/words")]
+    public ActionResult Index()
+    {
+      return View();
+    }
+  }
+}
 
 
-//
+
 //     public void WordsConstructor_CreateInstanceOfWords_Words()
 //     {
 //       string sentence = "Kittytopia is the best place to see kitties and find your kitty best friend";

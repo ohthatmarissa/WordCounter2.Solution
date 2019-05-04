@@ -37,28 +37,28 @@ namespace WordCounter.Tests
       CollectionAssert.AreEqual(expectedArray, resultArray);
     }
 
-    [TestMethod]
-    public void Counting_HowManyTimesWordInSentence_Int()
-    {
-      string sentence = "Kittytopia is the best place to see kitties and find your kitty best friend";
-      string oneWord = "kitty";
-
-      int result = 1;
-      Words newWords = new Words(sentence, oneWord);
-      Assert.AreEqual(result, newWords.Counting());
-
-      sentence = "Kittytopia is the best place to see kitties and find your kitty best friend";
-      oneWord = "best";
-      result = 2;
-      newWords = new Words(sentence, oneWord);
-      Assert.AreEqual(result, newWords.Counting());
-
-      sentence = "Kittytopia is the best place to see kitties and find your kitty best friend";
-      oneWord = "Best";
-      result = 2;
-      newWords = new Words(sentence, oneWord);
-      Assert.AreEqual(result, newWords.Counting());
-    }
-
-  }
-}
+//     [TestMethod]
+//     public void Counting_HowManyTimesWordInSentence_Int()
+//     {
+//       string sentence = "Kittytopia is the best place to see kitties and find your kitty best friend";
+//       string oneWord = "kitty";
+//
+//       int result = 1;
+//       Words newWords = new Words(sentence, oneWord);
+//       Assert.AreEqual(result, newWords.Counting());
+//
+//       sentence = "Kittytopia is the best place to see kitties and find your kitty best friend";
+//       oneWord = "best";
+//       result = 2;
+//       newWords = new Words(sentence, oneWord);
+//       Assert.AreEqual(result, newWords.Counting());
+//
+//       sentence = "Kittytopia is the best place to see kitties and find your kitty best friend";
+//       oneWord = "Best";
+//       result = 2;
+//       newWords = new Words(sentence, oneWord);
+//       Assert.AreEqual(result, newWords.Counting());
+//     }
+//
+//   }
+// }
