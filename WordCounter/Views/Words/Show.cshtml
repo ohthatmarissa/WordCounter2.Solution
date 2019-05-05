@@ -1,20 +1,12 @@
-@using WordCounter.Models;
+@{
+  Layout = "_Layout";
+}
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title>Hello friend!</title>
-  </head>
-  <body>
-    <h1>Word Counter</h1>
+@using WordCounter.Models;
 
     <div class="container">
       <h1>Word Counter Result</h1>
       <br>
-      <p>Your Word "@Model.GetOneWord()" Appeared @Model.Counting() Times in "@Model.GetSentence()"</p>
+      <p>Your Word Appeared @Model.Counting() Times</p>
       <a href = '/words'>Test Another</a>
     </div>
-
-  </body>
-</html>

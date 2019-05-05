@@ -17,9 +17,6 @@ namespace WordCounter.Tests
       //Asserts that the constructor returns an object with type Words
       Assert.AreEqual(typeof(Words), newWords.GetType());
 
-
-
-
       //Asserts that the constructor is properly setting the sentence property
       string result = newWords.GetSentence();
       string expectedSentence = sentence.ToUpper();

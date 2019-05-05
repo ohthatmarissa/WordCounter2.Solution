@@ -1,12 +1,7 @@
-@using WordCounter.Models;
+@{
+  Layout = "_Layout";
+}
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title>Hello friend!</title>
-  </head>
-  <body>
     <h1>Word Counter</h1>
 
     <form action="/words/show" method="post">
@@ -16,6 +11,3 @@
       <input id="sentence" name="sentence" type="text" required>
       <button class="submitbutton" type="submit">Submit</button>
     </form>
-
-  </body>
-</html>
