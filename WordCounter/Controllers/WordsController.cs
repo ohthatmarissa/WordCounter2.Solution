@@ -18,11 +18,5 @@ namespace WordCounter.Controllers
       return View("Show", myWord);
     }
 
-    // [HttpGet("/words/show")]
-    // public ActionResult Show()
-    // {
-    //   return View();
-    // }
-
   }
 }
