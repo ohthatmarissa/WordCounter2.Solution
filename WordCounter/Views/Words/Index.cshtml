@@ -1,0 +1,23 @@
+// @{
+//   Layout = "_Layout";
+// }
+// @using WordCounter.Models;
+
+@using WordCounter.Models;
+
+<h1>Word Counter</h1>
+<ul>
+
+@if (Word._instances.Count == 0)
+{
+  <p>You have no items in your to do list!</p>
+}
+@if(WordCount._instances.Count != 0)
+{
+
+  @foreach (Word word in Word._instances)
+  {
+    <li><a href='/words/@word.GetId()'>@word.GetID()</a></li>
+  }
+}
+</ul>

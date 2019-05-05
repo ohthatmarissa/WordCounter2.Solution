@@ -3,20 +3,40 @@ using System;
 using System.Collections.Generic;
 using WordCounter.Models;
 
-namespace Words.Controllers
+namespace WordCounter.Controllers
 {
   public class WordsController : Controller
   {
     [HttpGet("/words")]
     public ActionResult Index()
     {
+      return new ViewResult();
+    }
+
+    [HttpGet("/words/new")]
+    public ActionResult New()
+    {
       return View();
+    }
+
+    [HttpPost("words")]
+    public ActionResult Create(string sentence, string oneWord)
+    {
+      Word myWord = new Word(sentence, oneWord);
+      return RedirectToAction("Index");
+    }
+
+    [HttpGet("/words/{id}")]
+    public ActionResult Show(int id)
+    {
+      Word word = Word.Find(id);
+      return View(word);
     }
   }
 }
 
 
-
+//
 //     public void WordsConstructor_CreateInstanceOfWords_Words()
 //     {
 //       string sentence = "Kittytopia is the best place to see kitties and find your kitty best friend";
