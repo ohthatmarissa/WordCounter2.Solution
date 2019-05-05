@@ -1,65 +1,35 @@
-// using Microsoft.VisualStudio.TestTools.UnitTesting;
-// using Microsoft.AspNetCore.Mvc;
-// using System.Collections.Generic;
-// using WordCounter.Controllers;
-// using WordCounter.Models;
-//
-// namespace WordCounter.Tests
-// {
-//   [TestClass]
-//   public class WordsTest
-//   {
-//     [TestMethod]
-//     public void WordsConstructor_CreateInstanceOfWords_Words()
-//     {
-//       string sentence = "Kittytopia is the best place to see kitties and find your kitty best friend";
-//       string oneWord = "kitty";
-//       Words newWords = new Words(sentence, oneWord);
-//       //Asserts that the constructor returns an object with type Words
-//       Assert.AreEqual(typeof(Words), newWords.GetType());
-//
-//
-//
-//
-//       //Asserts that the constructor is properly setting the sentence property
-//       string result = newWords.GetSentence();
-//       string expectedSentence = sentence.ToUpper();
-//       Assert.AreEqual(expectedSentence, result);
-//
-//       //Asserts that the constructor is properly setting the oneWord property
-//       string resultOneWord = newWords.GetOneWord();
-//       string expectedOneWord = oneWord.ToUpper();
-//       Assert.AreEqual(expectedOneWord, resultOneWord);
-//
-//       //Assert that the constructor is properly computing the array property
-//       string[] expectedArray = expectedSentence.Split(' ');
-//       string[] resultArray = newWords.GetArray();
-//       CollectionAssert.AreEqual(expectedArray, resultArray);
-//     }
-//   }
-// }
-//     [TestMethod]
-//     public void Counting_HowManyTimesWordInSentence_Int()
-//     {
-//       string sentence = "Kittytopia is the best place to see kitties and find your kitty best friend";
-//       string oneWord = "kitty";
-//
-//       int result = 1;
-//       Words newWords = new Words(sentence, oneWord);
-//       Assert.AreEqual(result, newWords.Counting());
-//
-//       sentence = "Kittytopia is the best place to see kitties and find your kitty best friend";
-//       oneWord = "best";
-//       result = 2;
-//       newWords = new Words(sentence, oneWord);
-//       Assert.AreEqual(result, newWords.Counting());
-//
-//       sentence = "Kittytopia is the best place to see kitties and find your kitty best friend";
-//       oneWord = "Best";
-//       result = 2;
-//       newWords = new Words(sentence, oneWord);
-//       Assert.AreEqual(result, newWords.Counting());
-//     }
-//
-//   }
-// }
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using WordCounter.Controllers;
+using WordCounter.Models;
+
+namespace WordCounter.Tests
+{
+  [TestClass]
+  public class WordsControllerTest
+  {
+    [TestMethod]
+    public void Index_ReturnsCorrectView_True()
+    {
+      WordsController controller = new WordsController();
+      ActionResult indexView = controller.Index();
+      Assert.IsInstanceOfType(indexView, typeof(ViewResult));
+    }
+
+    [TestMethod]
+    public void Show_ReturnsCorrectView_True()
+    {
+      WordsController controller = new WordsController();
+      ActionResult showView = controller.Show();
+      Assert.IsInstanceOfType(showView, typeof(ViewResult));    }
+    // [TestMethod]
+    // public void New_ReturnsCorrectView_True()
+    // {
+    //   WordsController controller = new WordsController();
+    //   ActionResult newView = controller.New();
+    //   Assert.IsInstanceOfType(newView, typeof(ViewResult));
+    // }
+  }
+
+}

@@ -13,24 +13,24 @@ namespace WordCounter.Controllers
       return new ViewResult();
     }
 
-    [HttpGet("/words/new")]
-    public ActionResult New()
-    {
-      return View();
-    }
+    // [HttpGet("/words/new")]
+    // public ActionResult New()
+    // {
+    //   return View();
+    // }
 
-    [HttpPost("words")]
+    [HttpPost("/words")]
     public ActionResult Create(string sentence, string oneWord)
     {
       Word myWord = new Word(sentence, oneWord);
       return RedirectToAction("Index");
     }
 
-    [HttpGet("/words/{id}")]
-    public ActionResult Show(int id)
+    [HttpGet("/words/show")]
+    public ActionResult Create(int count, string oneWord, string sentence)
     {
-      Word word = Word.Find(id);
-      return View(word);
+      
+      return View("Show");
     }
   }
 }
