@@ -1,6 +1,6 @@
-using System;
+
 using System.Collections.Generic;
-using WordCounter;
+
 
 namespace WordCounter.Models
 {
@@ -9,19 +9,12 @@ namespace WordCounter.Models
     private string _sentence;
     private string _oneWord;
     private string[] _array;
-    // private int _id;
-    // private static List<Word> _instances = new List<Word> {};
 
-
-    public Word(string fullSentence, string wordToMatch)
+    public Word(string sentence, string oneWord)
     {
-      _sentence = fullSentence.ToUpper();
-      _oneWord = wordToMatch.ToUpper();
+      _sentence = sentence.ToUpper();
+      _oneWord = oneWord.ToUpper();
       _array = _sentence.Split(' ');
-
-      // _instances.Add(this);
-      // _id = _instances.Count;
-
     }
 
     public string GetSentence()
@@ -43,16 +36,6 @@ namespace WordCounter.Models
     {
       return _array;
     }
-
-    // public int GetId()
-    // {
-    //   return _id;
-    // }
-
-    // public static Word Find(int searchId)
-    // {
-    //   return _instances[searchId-1];
-    // }
 
     public int Counting()
     {

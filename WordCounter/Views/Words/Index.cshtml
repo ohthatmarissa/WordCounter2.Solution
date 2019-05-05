@@ -9,12 +9,12 @@
   <body>
     <h1>Word Counter</h1>
 
-    <form action="/words" method="post">
+    <form action="/words/show" method="post">
       <label for="oneWord">Add a new word</label>
-      <input id="oneWord" name="oneWord" type="text">
+      <input id="oneWord" name="oneWord" type="text" required>
       <label for="sentence">Add a new word</label>
-      <input id="sentence" name="sentence" type="text">
-      <button type="submit">Submit</button>
+      <input id="sentence" name="sentence" type="text" required>
+      <button class="submitbutton" type="submit">Submit</button>
     </form>
 
   </body>
