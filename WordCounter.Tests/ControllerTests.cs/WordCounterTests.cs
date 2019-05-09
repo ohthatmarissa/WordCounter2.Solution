@@ -23,13 +23,7 @@ namespace WordCounter.Tests
       WordsController controller = new WordsController();
       ActionResult showView = controller.Show();
       Assert.IsInstanceOfType(showView, typeof(ViewResult));    }
-    // [TestMethod]
-    // public void New_ReturnsCorrectView_True()
-    // {
-    //   WordsController controller = new WordsController();
-    //   ActionResult newView = controller.New();
-    //   Assert.IsInstanceOfType(newView, typeof(ViewResult));
-    // }
+
   }
 
 }
