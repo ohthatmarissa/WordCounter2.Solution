@@ -1,15 +1,19 @@
 body {
-  background-color: pink;
+  background-color: #d9b3ff;
 }
 
 .container {
-  background-color: yellow;
+  background-color: #ffffcc;
   padding-top: 100px;
   text-align: center;
+  border: 3px solid #6600cc;
+  margin-top: 100px;
+  box-shadow: 2px 2px 4px #000000;
 }
 
 h1 {
   font-family: Monaco;
+  text-shadow: 2px 2px 2px pink;
 }
 
 h3  {
