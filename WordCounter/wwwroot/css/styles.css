@@ -1,0 +1,17 @@
+body {
+  background-color: pink;
+}
+
+.container {
+  background-color: yellow;
+  padding-top: 100px;
+  text-align: center;
+}
+
+h1 {
+  font-family: Monaco;
+}
+
+h3  {
+  font-family: Monaco;
+}
